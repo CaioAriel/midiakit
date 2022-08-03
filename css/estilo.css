@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+:root{
+	--cor-vermelho-claro:#FA8072;
+	--cor-vermelho-escuro:#8B2252;
+	--cor-azul-claro:#8B008B;
+	--cor-cinza-claro:#4F4F4F;
+	--cor-cinza-escuro:#1C1C1C;
+	--cor-preto:#000000;
+	--cor-verde-claro:#ADFF2F;
+	--cor-verde-escuro:#006400;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color:#FFF0F5;
+}
+html,body{
+	font-family:'Oswald', sans-serif;
+}
+
+#titulo{
+	align-items: center;
+	height: 90px;
+	justify-content: center;
+}
+#titulo img{
+	height: 30px;
+	margin-right: 10px;
+}
+.uppercase{
+	text-transform: uppercase;
+}
+.letter-spacing{
+	letter-spacing: 5px;
+}
+.flex{
+	display: flex;
+}
+#foto-perfil{
+	align-items: center;
+	height: 500px;
+	overflow: hidden;
+}
+#foto-perfil img{
+	width: 100%;
+}
+#name{
+	align-items: center;
+    flex-direction: column;
+    height: 230px;
+    justify-content: center;
+}
+.atuacao-profissional{
+	color: var(--cor-vermelho-claro);
+	font-weight: bold;
+	font-size: 1.25rem;
+}
+#info{
+	width: 100vw;
+}
+.titulo-info{
+	background-color: var(--cor-vermelho-escuro);
+	border-top: solid 3px var(--cor-azul-claro);
+	font-size: 1rem;
+	padding: 1rem 0;
+	text-align: center;
+}
+.coluna-de-info{
+	padding: 2rem;
+}
+section p{
+	line-height: 2rem;
+}
+.coluna-de-info .margem-inferior{
+	margin-bottom: 2rem;
+}
+.info-exp{
+	margin-bottom: 2rem;
+}
+.info-exp *{
+	line-height: 1.2rem;
+}
+.encargo{
+	color: var(--cor-vermelho-claro);
+	font-weight: 400;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+.periodo{
+	color: var(--cor-cinza-claro);
+}
+.endereco{
+	background-color: var(--cor-cinza-escuro)
+}
+#caixa-img-endereco{
+	background-color: var(--cor-preto)
+}
+.caixa-img-whats{
+	background-color: var(--cor-verde-claro)
+}
+.whats{
+	background-color: var(--cor-verde-escuro)
+}
+.linha{
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    transition: all ease-in-out .2s;
+}
+
+.linha:hover{
+    transform: scale(1.025);
+}
+
+.linha a{
+    color: white;
+    flex: 6;    
+    padding-left: 1rem;
+    text-decoration: none;
+    align-self: center;
+}
+
+footer{
+    width: 100%;
+}
+.caixa-img{
+	align-items: center;
+    box-shadow: inset 0 0 10px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.caixa-img img{
+	height: 1.5rem;
+}
+@media screen and (min-width: 960px){
+    header{
+        align-items: flex-start;
+        display: grid;
+        grid-template: "titulo name foto-perfil";
+        grid-template-columns: auto auto 30vw;
+        height: 180px; 
+    }
+
+    #titulo{
+        grid-area: titulo;
+        height: auto;
+        padding-top: 2rem;
+    }
+
+    #foto-perfil{
+        background: url(../img/profile.jpg) no-repeat no-repeat center center;
+        background-attachment: fixed;
+        background-size: 50%;
+        background-position: right top;
+        box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.2);
+        grid-area: foto-perfil;
+        min-height: 60vh;        
+        position: fixed;
+        right: 0;
+        width: 30vw;
+    }
+
+    #foto-perfil img{
+        min-width: 500px;
+    }
+
+    #name{
+        align-items: flex-end;
+        grid-area: name;
+        height: auto;
+        padding-top: 2rem;
+        padding-right: 2rem;   
+    }
+
+    #info{
+        width: 70vw;
+    }
+    
+    #coluna-exp{
+        width: 70vw;
+        height: 0;
+    }
+
+    footer{
+        bottom: 0;
+        box-shadow: 0px 20px 10px 10px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;    
+        height: 25vh;   
+        position: fixed;        
+        width: 30vw;  
+        right: 0; 
+    }
+
+    footer .linha{
+        flex: 1;
+    }
+}
